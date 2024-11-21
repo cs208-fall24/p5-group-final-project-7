@@ -55,8 +55,8 @@ body
                 li Critique Aquariums
     img(src="img/Whale_Sighting.jpg", alt="A picture of a whale breaching at sea.")
     img(src="img/Weird_Fish.jpg", alt="Some weird looking fish.")
-    h2 Comments
+    h2 
+        a(href="student2/comments") Comments
     ul 
-        //- List of comments randomly selected from database
-            
-            Should contain a maximum of 5, depending on amount in database
+        - for (let i = 0; i < Math.min(comments.length, 5); i++)
+            li= comments[i].message
