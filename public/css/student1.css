@@ -1,3 +1,102 @@
-body{
-    background-color: hotpink;
+body {
+    background-color: #e0e0d1; /* Light greenish background */
+    font-family: 'Times New Roman', serif; /* Classic font */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center; /* Center all text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Garamond', serif; /* Classic font for headings */
+    color: #2e8b57; /* Dark green color */
+}
+
+p {
+    font-family: 'Georgia', serif;
+    color: #666;
+    line-height: 1.6;
+}
+
+a {
+    color: #006400; /* Dark green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center content within container */
+}
+
+.header, .footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center; /* Center text in header and footer */
+    border-bottom: 2px solid #2e8b57; /* Dark green border */
+}
+
+.header h1, .footer p {
+    margin: 0;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center; /* Center main content */
+}
+
+button {
+    background-color: #2e8b57; /* Dark green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006400; /* Darker green */
+}
+
+.section {
+    margin-bottom: 20px;
+    text-align: center; /* Center text in sections */
+}
+
+.section h2 {
+    border-bottom: 2px solid #2e8b57; /* Dark green border */
+    padding-bottom: 10px;
+}
+
+.section p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: square; /* Classic list style */
+    padding-left: 20px;
+    display: inline-block; /* Center list items */
+    text-align: left; /* Align text within list items to the left */
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center images */
+    border: 2px solid #2e8b57; /* Dark green border */
+    border-radius: 4px;
 }

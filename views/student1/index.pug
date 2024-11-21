@@ -6,7 +6,7 @@ head
   title Golf Management
 h1 Quinton Duce
 h2 Golf Management
-section
+section(class='Location')
   h2 Location
   p
     | Scotland, known as the home of golf, is the perfect place to study a Golf Management major. With its rich history,
@@ -15,23 +15,25 @@ section
     | most well-known courses. Students will develop skills in management, marketing, and running golf operations while
     | surrounded by Scotland&rsquo;s beautiful scenery and golfing traditions. It&rsquo;s the perfect program for anyone who wants to
     | build a career in the golf industry.
+img(src='/img/GolfManagementSwing.jfif' id='Swing')
+
 section
   h2 About
-  section
+  section(class='Operations')
     h3 Operations
     p
       | In the operations side of golf management, you will learn how to run a golf course smoothly. This includes managing
       | the staff, scheduling tee times, organizing tournaments, and ensuring that all facilities are in top condition. You
       | will also learn about customer service, budgeting, and marketing to attract more players to the course. These skills
       | are essential for making sure that everything runs efficiently and that golfers have a great experience.
-  section
+  section(class='Maintenance')
     h3 Maintenance
     p
       | In the maintenance part of golf management, you will learn how to keep the golf course in great shape. This includes
       | taking care of the grass, fixing any damage, and making sure the course is safe and enjoyable for players. You will
       | also learn about the tools and machines used to maintain the course, as well as how to plan and carry out regular
       | maintenance tasks. Making sure the course is up to par is essential for running a successful golf club.
-  section
+  section(class='History')
     h3 History
     p
       | In the history part of the golf management major, you will explore the origins and evolution of the game of golf.
@@ -39,7 +41,7 @@ section
       | establishment of famous golf courses around the world. You will also learn about significant figures in golf
       | history, major tournaments, and how the sport has grown and changed over the centuries. Understanding the history of
       | golf will give you a deeper appreciation for the game and its cultural significance.
-section
+section(class='Career_Options')
   h2 Things to Do
   ul
     li Manage golf courses and clubs
@@ -49,8 +51,10 @@ section
     li Provide golf instruction and coaching
     li Develop golf-related businesses and products
     li Work in golf tourism and travel
-section
-  h2 Comments
-  p TODO: add 5 random comments
-img(src='/public/img/GolfManagementMorning.jpg' alt='')
-img(src='/public/img/GolfManagementSwing.jfif' alt='')
+section(class='Comments')
+  h2 
+    a(href="student1/comments") Comments
+  ul
+    - for (let i = 0; i < Math.min(comments.length, 5); i++)
+        li= comments[i].message
+img(src='/img/GolfManagementMorning.jpg' id='Morning')
