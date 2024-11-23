@@ -19,12 +19,32 @@ app.set('views', 'views')
 app.set('view engine', 'pug')
 app.use(express.urlencoded({ extended: false }))
 
+
 app.get('/', function (req, res) {
   console.log('GET called')
   res.render('index')
 })
 
 app.get('/student1', function (req, res) {
+  console.log('GET called')
+  const local = {comments: []}
+    db.each('SELECT id, message FROM student1comments', function (err, row) {
+      if (err) {
+        console.error(err)
+      } else {
+        local.comments.push({id: row.id, message: row.message})
+      }
+    }, function (err, numrows) {
+      if(!err){
+        res.render('student1/index', local)
+      } else {
+        console.log(err)
+      }
+    });
+
+});
+
+app.get('/student1/comments', function (req, res) {
   console.log('GET called')
   const local = {comments: []}
     db.each('SELECT id, message FROM student1comments', function (err, row) {
@@ -43,10 +63,18 @@ app.get('/student1', function (req, res) {
 
 });
 
-app.post('/student1/comments', function (req, res) {
+app.post('/student1/add', function (req, res) {
   console.log('adding comment')
   const stmt = db.prepare('INSERT INTO student1Comments (message) VALUES (?)')
   stmt.run(req.body.comment)
+  stmt.finalize()
+  res.redirect("/student1/comments")
+})
+
+app.post('/student1/delete', function (req, res) {
+  console.log('deleting comment')
+  const stmt = db.prepare('DELETE FROM student1Comments WHERE id = (?)')
+  stmt.run(req.body.id)
   stmt.finalize()
   res.redirect("/student1/comments")
 })

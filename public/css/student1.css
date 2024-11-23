@@ -1,102 +1,163 @@
-body {
-    background-color: #e0e0d1; /* Light greenish background */
-    font-family: 'Times New Roman', serif; /* Classic font */
-    color: #333;
+*{
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    text-align: center; /* Center all text */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Garamond', serif; /* Classic font for headings */
-    color: #2e8b57; /* Dark green color */
+.Header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/img/GolfManagementMorning.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-p {
-    font-family: 'Georgia', serif;
-    color: #666;
-    line-height: 1.6;
+.Header-Title{
+    width: 90%;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 70px;
 }
 
-a {
-    color: #006400; /* Dark green */
-    text-decoration: none;
+.Header-Title h1{
+    padding: 50px;
 }
 
-a:hover {
+.Header-Title h2{
+    font-size: 40px;
+}
+
+.Location{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    padding: 50px;
+    color: #fff;
+}
+
+.Location h2{
+    font-size: 50px;
+    padding-bottom: 15px;
+}
+
+.Location p{
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.About h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 50px;
     text-decoration: underline;
 }
 
-.container {
+.About-Content{
     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center; /* Center content within container */
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    padding: 50px;
+    color: #fff;
 }
 
-.header, .footer {
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    text-align: center; /* Center text in header and footer */
-    border-bottom: 2px solid #2e8b57; /* Dark green border */
+.About-Content h3{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-bottom: 15px;
+    padding-top: 40px;
 }
 
-.header h1, .footer p {
-    margin: 0;
+.About-Content{
+    font-size: 20px;
+    line-height: 30px;
 }
 
-.main-content {
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: center; /* Center main content */
+.Career-Options h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 50px;
+    text-decoration: underline;
 }
 
-button {
-    background-color: #2e8b57; /* Dark green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+.Career-Options-List{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    padding: 50px;
+    color: #fff;
 }
 
-button:hover {
-    background-color: #006400; /* Darker green */
+.Career-Options-List ul{
+    list-style-type: circle;
 }
 
-.section {
-    margin-bottom: 20px;
-    text-align: center; /* Center text in sections */
+.Career-Options-List li{
+    font-size: 30px;
+    padding-bottom: 20px;
 }
 
-.section h2 {
-    border-bottom: 2px solid #2e8b57; /* Dark green border */
-    padding-bottom: 10px;
+.Comments h2{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
 }
 
-.section p {
-    margin: 10px 0;
+.Comments-List{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    padding: 50px;
+    color: #fff;
+    margin-bottom: 100px;
 }
 
-ul {
-    list-style-type: square; /* Classic list style */
-    padding-left: 20px;
-    display: inline-block; /* Center list items */
-    text-align: left; /* Align text within list items to the left */
+.Comments-List li{
+    list-style: circle;
+    padding-bottom: 20px;
+    font-size: 35px;
 }
 
-li {
-    margin-bottom: 10px;
+.bottom-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-img {
-    max-width: 100%;
+.bottom-img img {
+    width: 80%;
     height: auto;
-    display: block;
-    margin: 20px auto; /* Center images */
-    border: 2px solid #2e8b57; /* Dark green border */
-    border-radius: 4px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.bottom-img img:hover {
+    transform: scale(1.05);
 }
