@@ -76,10 +76,10 @@ app.post('/student2/comments', function (req, res) {
 // Delete comments from the database
 app.post('/student2/comments/delete', function (req, res) {
   console.log('removing comment')
-  const stmt = db.prepare('DELETE FROM todo where id = (?)')
-  stmt.run(req.body.comment)
+  const stmt = db.prepare('DELETE FROM student2Comments WHERE id = (?)')
+  stmt.run(req.body.id)
   stmt.finalize()
-  res.redirect("/")
+  res.redirect("/student2/comments")
 })
 
 app.get('/student3', function (req, res) {
