@@ -73,6 +73,15 @@ app.post('/student2/comments', function (req, res) {
   res.redirect("/student2/comments")
 })
 
+// Delete comments from the database
+app.post('/student2/comments/delete', function (req, res) {
+  console.log('removing comment')
+  const stmt = db.prepare('DELETE FROM todo where id = (?)')
+  stmt.run(req.body.comment)
+  stmt.finalize()
+  res.redirect("/")
+})
+
 app.get('/student3', function (req, res) {
   console.log('GET called')
   res.render('student3')

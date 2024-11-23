@@ -8,6 +8,9 @@ body
         ul
         - for (let i = 0; i < comments.length; i++)
             li= comments[i].message
+                form(action="/delete", method="post")
+                    input(type="hidden", name="id" value=comments[i].id)
+                    input(type="submit", value="Delete")
     h1 Post Comment 
     form(action="/student2/comments" method="POST")
         p
