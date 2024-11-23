@@ -1,0 +1,23 @@
+doctype html 
+link(rel='stylesheet' href='css/student1.css')
+
+head 
+    title Golf Management - Comments 
+body 
+    h5
+        a(href="/student1") Back To Home
+    h1 Post Comment 
+    form(action="/student1/add" method="POST")
+        p
+            label(for="comment") Comment: 
+            input(type="text" name="comment" placeholder="Comment..." required)
+        p
+            input(type="submit")
+    h1 Comments 
+        ul
+        - for (let i = 0; i < comments.length; i++)
+            li= comments[i].message
+            form(action="/student1/delete" method="POST")
+                input(type="hidden" name="id" value=comments[i].id)
+                button(type="submit") Delete
+    
