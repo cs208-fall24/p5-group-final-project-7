@@ -56,8 +56,12 @@ section(class='Career-Options')
 section(class='Comments')
   h2 
     a(href="/student1/comments") Comments
-  ul(class='Comments-List')
-    - for (let i = 0; i < Math.min(comments.length, 5); i++)
-        li= comments[i].message
+    if comments.length > 0
+      ul(class='Comments-List')
+        - for (let i = 0; i < Math.min(comments.length, 5); i++)
+            li= comments[i].message
+    else
+      p No comments
+
 section(class='bottom-img')
   img(src='/img/GolfManagementSwing.jfif')

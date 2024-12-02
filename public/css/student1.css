@@ -4,7 +4,7 @@
 }
 
 .Header{
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/img/GolfManagementMorning.jpg);
     background-position: center;
@@ -116,7 +116,7 @@
     padding-bottom: 20px;
 }
 
-.Comments h2{
+.Comments a{
     padding-top: 100px;
     display: flex;
     justify-content: center;
@@ -140,6 +140,13 @@
     list-style: circle;
     padding-bottom: 20px;
     font-size: 35px;
+}
+
+.Comments p{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .bottom-img{
