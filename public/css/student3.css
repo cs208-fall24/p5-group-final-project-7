@@ -1,3 +1,80 @@
 body{
     background-color: white;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+img {
+    display: block;
+    margin: 20px 0;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+  
+#comment-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form input[type="text"] {
+    padding: 5px;
+    width: 300px;
+  }
+  
+  .comment-form button {
+    background-color: #2ecc71;
+    border-radius: 5px;
+    padding: 8px 15px;
+  }
+  
+  .comment-form button:hover {
+    background-color: #27ae60;
+  }
+  
+  .comment-list li {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+section {
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+form {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
