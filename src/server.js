@@ -155,7 +155,20 @@ app.post('/student2/comments/delete', function (req, res) {
   res.redirect("/student2/comments")
 })
 
+// Update an existing comment
+app.post('/student2/comments/update', function (req, res) {
+  const commentId = req.body.commentId;
+  const updatedComment = req.body.updatedComment;
 
+  db.run("UPDATE student2Comments SET message = ? WHERE id = ?", [updatedComment, commentId], function (err) {
+    if (err) {
+      console.error("Error updating comment: ", err);
+      return res.status(500).send("Error updating comment");
+    }
+    
+    res.redirect('/student2/comments');
+  });
+});
 
 // Create the 'student3_comments' table for storing comments 
 db.serialize(() => {

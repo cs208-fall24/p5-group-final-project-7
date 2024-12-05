@@ -19,4 +19,8 @@ body
             li= comments[i].message
                 form(action="/student2/comments/delete", method="post")
                     input(type="hidden", name="id" value=comments[i].id)
-                    input(type="submit", value="Delete")
+                    input(type="submit", value="Delete") 
+            form(action='/student2/comments/update', method='POST') 
+              input(type='hidden' name='commentId' value=comments[i].id)
+              input(type='text' name='updatedComment' value=comments.message placeholder='Update your comment' required)
+              button(type='submit') Update
