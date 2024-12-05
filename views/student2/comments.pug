@@ -4,13 +4,8 @@ link(rel='stylesheet' href='css/student2.css')
 head 
     title Marine Biology - Comments 
 body 
-    h1 Comments 
-        ul
-        - for (let i = 0; i < comments.length; i++)
-            li= comments[i].id + " " + comments[i].message
-                form(action="/student2/comments/delete", method="post")
-                    input(type="hidden", name="id" value=comments[i].id)
-                    input(type="submit", value="Delete")
+    h5
+        a(href="/student2") Back To Home
     h1 Post Comment 
     form(action="/student2/comments" method="POST")
         p
@@ -18,3 +13,10 @@ body
             input(type="text" name="comment" placeholder="Comment..." required)
         p
             input(type="submit")
+    h1 Comments 
+        ul
+        - for (let i = 0; i < comments.length; i++)
+            li= comments[i].message
+                form(action="/student2/comments/delete", method="post")
+                    input(type="hidden", name="id" value=comments[i].id)
+                    input(type="submit", value="Delete")
