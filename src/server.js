@@ -71,7 +71,7 @@ app.get('/student1/comments', function (req, res) {
 
 app.post('/student1/add', function (req, res) {
   console.log('adding comment')
-  const stmt = db.prepare('INSERT INTO student1Comments (message) VALUES (?)')
+  const stmt = db.prepare('INSERT INTO student1comments (message) VALUES (?)')
   stmt.run(req.body.comment)
   stmt.finalize()
   res.redirect("/student1/comments")
@@ -79,11 +79,25 @@ app.post('/student1/add', function (req, res) {
 
 app.post('/student1/delete', function (req, res) {
   console.log('deleting comment')
-  const stmt = db.prepare('DELETE FROM student1Comments WHERE id = (?)')
+  const stmt = db.prepare('DELETE FROM student1comments WHERE id = (?)')
   stmt.run(req.body.id)
   stmt.finalize()
   res.redirect("/student1/comments")
 })
+
+app.post('/student1/update-comment', function (req, res) {
+  const commentId = req.body.commentId;
+  const updatedComment = req.body.updatedComment;
+
+  db.run("UPDATE student1comments SET message = ? WHERE id = ?", [updatedComment, commentId], function (err) {
+    if (err) {
+      console.error("Error updating comment: ", err);
+      return res.status(500).send("Error updating comment");
+    }
+    
+    res.redirect('/student1/comments');
+  });
+});
 
 // Get comments from database and render index with results
 app.get('/student2', function (req, res) {

@@ -15,9 +15,16 @@ body
             input(type="submit")
     h1 Comments 
         ul
+         //for loop to display all comments
         - for (let i = 0; i < comments.length; i++)
-            li= comments[i].message
+            //sets the comment to the message in the comments array
+            li= comments[i].message 
             form(action="/student1/delete" method="POST")
                 input(type="hidden" name="id" value=comments[i].id)
                 button(type="submit") Delete
+            //adds a form to update the comment
+            form(action='/student1/update-comment', method='POST') 
+              input(type='hidden' name='commentId' value=comments[i].id)
+              input(type='text' name='updatedComment' value=comments.message placeholder='Update your comment' required)
+              button(type='submit') Update
     
