@@ -1,16 +1,18 @@
+//This doc creates the funtions for the buttons on the comments
+
+
 let comments = [];
 
-// Function to fetch and render comments
 function fetchComments() {
   fetch('/student3')
     .then(response => response.json())
     .then(data => {
-      comments = data.comments;  // Store the fetched comments
-      renderComments();          // Render comments to the page
+      comments = data.comments;  
+      renderComments();          
     });
 }
 
-// Add a new comment
+
 function addComment(commentText) {
   fetch('/student3/add-comment', {
     method: 'POST',
@@ -18,14 +20,14 @@ function addComment(commentText) {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   }).then(response => response.text())
     .then(() => {
-      fetchComments();  // Reload the comments after the new one is added
+      fetchComments(); 
     });
 }
 
-// Render comments to the page
+
 function renderComments() {
   const commentList = document.getElementById('comment-list');
-  commentList.innerHTML = ''; // Clear existing comments
+  commentList.innerHTML = ''; 
 
   if (comments.length === 0) {
     commentList.innerHTML = '<li>No comments yet.</li>';
@@ -38,9 +40,9 @@ function renderComments() {
   }
 }
 
-// Handle form submission for adding a comment
+
 document.addEventListener('DOMContentLoaded', () => {
-  fetchComments(); // Fetch comments when the page loads
+  fetchComments(); 
 
   const commentForm = document.getElementById('comment-form');
   if (commentForm) {
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const commentInput = document.getElementById('comment-input');
       if (commentInput.value.trim()) {
         addComment(commentInput.value.trim());
-        commentInput.value = ''; // Clear input field after submission
+        commentInput.value = ''; 
       }
     });
   }
