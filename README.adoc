@@ -1,7 +1,5 @@
 = Final Project
 
-"This is Tristin Watkins branch and work"
-
 == Project links
 
 * https://youtu.be/nDeFmR36YOo[Video Walkthrough]
