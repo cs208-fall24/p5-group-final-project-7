@@ -1,57 +1,101 @@
-body{
-    background-color: white;
-    font-family: Arial, sans-serif;
+body {
+    background-color: #fdf7e2;
+    font-family: 'Verdana', sans-serif;
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3 {
+    color: #397D4D;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 4px solid #f1c40f;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f1c40f;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: left;
+    border-left: 6px solid #397D4D;
+    padding-left: 10px;
     color: #2c3e50;
 }
 
 img {
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    border: 5px solid #f39c12;
 }
 
 #comment-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
-  
+
 #comment-list li {
     background-color: #fff;
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #397D4D;
 }
 
 .comment-form input[type="text"] {
-    padding: 5px;
-    width: 300px;
-  }
-  
-  .comment-form button {
-    background-color: #2ecc71;
-    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-right: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 8px;
     padding: 8px 15px;
-  }
-  
-  .comment-form button:hover {
-    background-color: #27ae60;
-  }
-  
-  .comment-list li {
-    padding: 15px;
-    margin: 10px 0;
-  }
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.comment-form button:hover {
+    background-color: #f39c12;
+}
 
 section {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 form {
@@ -59,22 +103,103 @@ form {
 }
 
 button {
-    background-color: #2ecc71;
+    background-color: #f1c40f;
     color: white;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-color: #f39c12;
 }
 
 a {
-    color: #3498db;
+    color: #397D4D;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #27ae60;
+}
+
+.mayo-jar-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 10px solid #f39c12;
+}
+
+.mayo-jar-text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    padding: 10px;
+    background-color: #fdf7e2;
+    border: 2px solid #f1c40f;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f1c40f;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.circle-box p {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.oval-box {
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f1c40f;
+}
+
+.oval-box p {
+    text-align: center;
+    color: #397D4D;
+    font-size: 16px;
+}
+
+.square-box {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f39c12;
+}
+
+.square-box p {
+    text-align: center;
+    color: #397D4D;
+    font-size: 16px;
 }
